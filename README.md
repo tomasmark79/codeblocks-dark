@@ -1,6 +1,5 @@
 ```
 Welcome to the Code::Block Dark Theme
-by DigitalSpaceDotName
 -------------------------------------
 ```
 
@@ -11,11 +10,12 @@ Dark pictures from
 `src-files-splited\src\resources\images\` copy to `..\src\resources\images\`
 `src-files-splited\src\resources\start_here` copy to `..\src\resources\start_here\
 
-Compile Workspace CodeBlocks_wx33_64.workspace
-
-To-Do: w32 architecture - you can do this and share :-)
+Dependencies:
+You need to have compiled latest wxWidgets with the same compiler you will compile cb.
 
 Thanks to
     adbrt for his pictures and whole comunity team for awesome C++ and Fortran IDE!
+	
+DigitalSpaceDotName(c)2024
 
 
