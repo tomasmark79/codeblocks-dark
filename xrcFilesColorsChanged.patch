@@ -1,0 +1,533 @@
+Index: src/plugins/codecompletion/resources/classbrowser.xrc
+===================================================================
+--- src/plugins/codecompletion/resources/classbrowser.xrc	(revision 13490)
++++ src/plugins/codecompletion/resources/classbrowser.xrc	(working copy)
+@@ -54,9 +54,27 @@
+ 							<object class="wxSplitterWindow" name="splitterWin">
+ 								<style>wxSP_LIVE_UPDATE</style>
+ 								<object class="wxTreeCtrl" name="treeAll" subclass="CCTreeCtrl">
++									<image_list></image_list>
++									<tree_items>
++										<item>TreeCtrl1</item>
++										<item></item>
++									</tree_items>
++									<items_text>
++										<item2>TreeCtrl1</item2>
++										<item2></item2>
++									</items_text>
+ 									<style>wxTR_HAS_VARIABLE_ROW_HEIGHT|wxTR_DEFAULT_STYLE</style>
+ 								</object>
+ 								<object class="wxTreeCtrl" name="treeMembers" subclass="CCTreeCtrl">
++									<image_list></image_list>
++									<tree_items>
++										<item>TreeCtrl2</item>
++										<item></item>
++									</tree_items>
++									<items_text>
++										<item2>TreeCtrl2</item2>
++										<item2></item2>
++									</items_text>
+ 									<style>wxTR_HAS_BUTTONS|wxTR_NO_LINES|wxTR_HIDE_ROOT|wxTR_HAS_VARIABLE_ROW_HEIGHT</style>
+ 								</object>
+ 							</object>
+Index: src/plugins/codecompletion/resources/project_settings.xrc
+===================================================================
+--- src/plugins/codecompletion/resources/project_settings.xrc	(revision 13490)
++++ src/plugins/codecompletion/resources/project_settings.xrc	(working copy)
+@@ -22,7 +22,7 @@
+ 						<object class="wxButton" name="btnAdd">
+ 							<label>&amp;Add</label>
+ 						</object>
+-						<flag></flag>
++						<flag>wxALIGN_LEFT</flag>
+ 					</object>
+ 					<object class="sizeritem">
+ 						<object class="wxButton" name="btnEdit">
+Index: src/plugins/codecompletion/resources/settings.xrc
+===================================================================
+--- src/plugins/codecompletion/resources/settings.xrc	(revision 13490)
++++ src/plugins/codecompletion/resources/settings.xrc	(working copy)
+@@ -415,7 +415,6 @@
+ 											<flag>wxALL|wxEXPAND</flag>
+ 											<border>5</border>
+ 										</object>
+-										<!-- Enable CC debugging begin -->
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkCCDebugLogging">
+ 												<label>Enable Debug Logging</label>
+@@ -423,7 +422,6 @@
+ 											<flag>wxALL|wxALIGN_LEFT</flag>
+ 											<border>5</border>
+ 										</object>
+-										 <!-- Enable CC debugging end -->
+ 									</object>
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+Index: src/plugins/compilergcc/resources/advanced_compiler_options.xrc
+===================================================================
+--- src/plugins/compilergcc/resources/advanced_compiler_options.xrc	(revision 13490)
++++ src/plugins/compilergcc/resources/advanced_compiler_options.xrc	(working copy)
+@@ -127,7 +127,6 @@
+ 											<flag>wxALIGN_TOP</flag>
+ 											<size>0,0</size>
+ 										</object>
+-										<!-- keep in sync with src/include/compiler.h -->
+ 										<object class="sizeritem">
+ 											<object class="wxStaticText" name="ID_STATICTEXT7">
+ 												<label>Compiler executable:&#x0A;Resource compiler executable:&#x0A;Linker executable:&#x0A;Linker executable for static libs:&#x0A;Compiler flags:&#x0A;Resource compiler flags:&#x0A;Linker flags:&#x0A;Compiler include paths:&#x0A;Resource include paths:&#x0A;Linker include paths:&#x0A;Link libraries:&#x0A;Source file (full name):&#x0A;Source file dir (no name, no ext.):&#x0A;Source file name (no path, no ext.):&#x0A;Source file extension:&#x0A;Object file:&#x0A;Dependency result:&#x0A;All *linkable* object files:&#x0A;All *linkable* flat object files:&#x0A;All *linkable* resource object files:&#x0A;Executable output file (full name):&#x0A;Executable dir (no name, no ext):&#x0A;Executable name (no path, no ext):&#x0A;Executable extension:&#x0A;Static library output file:&#x0A;Dynamic library output file:&#x0A;Dynamic library DEF output file:&#x0A;Resources output file:&#x0A;Objects output dir:</label>
+@@ -205,7 +204,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT9">
+ 														<label>Order matters!&#x0A;The first matching parsing expression is selected.</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxTOP|wxLEFT|wxEXPAND</flag>
+ 													<border>4</border>
+@@ -355,7 +354,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT18">
+ 														<label>A sub-expression index of 0 (zero), means it&apos;s not provided by&#x0A;the regular expression.</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 													<border>4</border>
+Index: src/plugins/compilergcc/resources/compiler_options.xrc
+===================================================================
+--- src/plugins/compilergcc/resources/compiler_options.xrc	(revision 13490)
++++ src/plugins/compilergcc/resources/compiler_options.xrc	(working copy)
+@@ -97,7 +97,7 @@
+ 								<object class="wxStaticText" name="lblBuildScriptsNote">
+ 									<label>NOTE: This project uses build scripts so it may override any options you set here...</label>
+ 									<hidden>1</hidden>
+-									<fg>#800000</fg>
++									<fg>#FF8080</fg>
+ 								</object>
+ 								<flag>wxALIGN_CENTER_HORIZONTAL</flag>
+ 								<border>8</border>
+@@ -160,7 +160,7 @@
+ 																	<object class="sizeritem">
+ 																		<object class="wxStaticText" name="ID_STATICTEXT31">
+ 																			<label>NOTE: Right-click to setup or edit compiler flags.</label>
+-																			<fg>#800000</fg>
++																			<fg>#FF8080</fg>
+ 																		</object>
+ 																		<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxALIGN_LEFT</flag>
+ 																		<border>8</border>
+@@ -1000,7 +1000,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT16">
+ 														<label>These variables can be used in compiler and/or linker options.&#x0A;Use them as compiler/linker options this way: $(varname)</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 														<style>wxST_NO_AUTORESIZE</style>
+ 													</object>
+ 													<flag>wxLEFT|wxRIGHT|wxEXPAND</flag>
+@@ -1050,7 +1050,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT17">
+ 														<label>IMPORTANT: These commands are ONLY used when the project is using a custom Makefile.</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 													<border>8</border>
+@@ -1141,7 +1141,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT22">
+ 														<label>Known variables: $make, $makefile, $target, $file and all macro variables</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 													<border>8</border>
+@@ -1163,7 +1163,7 @@
+ 														<object class="sizeritem">
+ 															<object class="wxStaticText" name="ID_STATICTEXT25">
+ 																<label>Number of processes for parallel builds:</label>
+-																<fg>#800000</fg>
++																<fg>#FF8080</fg>
+ 															</object>
+ 															<flag>wxRIGHT|wxALIGN_CENTER_VERTICAL</flag>
+ 															<border>4</border>
+@@ -1278,7 +1278,7 @@
+ 														<object class="sizeritem">
+ 															<object class="wxStaticText" name="ID_STATICTEXT29">
+ 																<label>NOTE: Default is to clean all projects/targets at once, before building them.</label>
+-																<fg>#800000</fg>
++																<fg>#FF8080</fg>
+ 															</object>
+ 															<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 															<border>8</border>
+Index: src/plugins/contrib/clangd_client/src/resources/clclassbrowser.xrc
+===================================================================
+--- src/plugins/contrib/clangd_client/src/resources/clclassbrowser.xrc	(revision 13490)
++++ src/plugins/contrib/clangd_client/src/resources/clclassbrowser.xrc	(working copy)
+@@ -25,7 +25,6 @@
+ 										<content>
+ 											<item>Current file&apos;s symbols</item>
+ 											<item>Current project&apos;s symbols</item>
+-											<!-- <item>All local symbols (workspace)</item> not supported in clangd_client -->
+ 											<item>default(project&apos;s symbols)</item>
+ 											<item>Everything</item>
+ 										</content>
+@@ -55,9 +54,27 @@
+ 							<object class="wxSplitterWindow" name="splitterWin">
+ 								<style>wxSP_LIVE_UPDATE</style>
+ 								<object class="wxTreeCtrl" name="treeAll" subclass="CCTreeCntrl">
++									<image_list></image_list>
++									<tree_items>
++										<item>TreeCtrl1</item>
++										<item></item>
++									</tree_items>
++									<items_text>
++										<item2>TreeCtrl1</item2>
++										<item2></item2>
++									</items_text>
+ 									<style>wxTR_HAS_VARIABLE_ROW_HEIGHT|wxTR_DEFAULT_STYLE</style>
+ 								</object>
+ 								<object class="wxTreeCtrl" name="treeMembers" subclass="CCTreeCntrl">
++									<image_list></image_list>
++									<tree_items>
++										<item>TreeCtrl2</item>
++										<item></item>
++									</tree_items>
++									<items_text>
++										<item2>TreeCtrl2</item2>
++										<item2></item2>
++									</items_text>
+ 									<style>wxTR_HAS_BUTTONS|wxTR_NO_LINES|wxTR_HIDE_ROOT|wxTR_HAS_VARIABLE_ROW_HEIGHT</style>
+ 								</object>
+ 							</object>
+Index: src/plugins/contrib/clangd_client/src/resources/clproject_settings.xrc
+===================================================================
+--- src/plugins/contrib/clangd_client/src/resources/clproject_settings.xrc	(revision 13490)
++++ src/plugins/contrib/clangd_client/src/resources/clproject_settings.xrc	(working copy)
+@@ -22,7 +22,7 @@
+ 						<object class="wxButton" name="btnAdd">
+ 							<label>&amp;Add</label>
+ 						</object>
+-						<flag></flag>
++						<flag>wxALIGN_LEFT</flag>
+ 					</object>
+ 					<object class="sizeritem">
+ 						<object class="wxButton" name="btnEdit">
+Index: src/plugins/contrib/clangd_client/src/resources/clsettings.xrc
+===================================================================
+--- src/plugins/contrib/clangd_client/src/resources/clsettings.xrc	(revision 13490)
++++ src/plugins/contrib/clangd_client/src/resources/clsettings.xrc	(working copy)
+@@ -68,18 +68,13 @@
+ 											<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 											<border>5</border>
+ 										</object>
+-
+-                                        <!-- Begin clangd options for Code Completion icons -->
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkUseCompletionIcons">
+ 												<label>Enable Use Code Completion Icons</label>
+-                                                <checked>0</checked>
+ 											</object>
+ 											<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 											<border>5</border>
+ 										</object>
+-                                        <!-- End clangd options for Code Completion icons -->
+-
+ 										<object class="sizeritem">
+ 											<object class="wxFlexGridSizer">
+ 												<cols>2</cols>
+@@ -328,7 +323,6 @@
+ 														<object class="sizeritem">
+ 															<object class="wxSpinCtrl" name="spnParsersWhileCompiling">
+ 																<value>0</value>
+-																<min>0</min>
+ 																<max>16</max>
+ 																<style>wxSP_ARROW_KEYS</style>
+ 															</object>
+@@ -347,8 +341,6 @@
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+ 								</object>
+-
+-                                <!-- Begin Clangd client options -->
+ 								<object class="sizeritem">
+ 									<object class="wxStaticBoxSizer">
+ 										<label>Specify clangd executable to use</label>
+@@ -381,13 +373,11 @@
+ 										<object class="sizeritem">
+ 											<object class="wxStaticText" name="ID_STATICTEXT7">
+ 												<label>NOTE: The clangd&apos;s version must be 13 or newer. Restart CB after changing this field. </label>
+-												<fg>#800000</fg>
++												<fg>#FF8080</fg>
+ 											</object>
+ 											<flag>wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 											<border>8</border>
+ 										</object>
+-                                        <!-- End Clangd client options -->
+-
+ 									</object>
+ 									<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 									<border>8</border>
+@@ -444,16 +434,13 @@
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+ 								</object>
+-
+-                            <!-- Begin clangd options for Code::Blocks logging -->
+ 								<object class="sizeritem">
+ 									<object class="wxStaticBoxSizer">
+ 										<label>Plugin logging to Code::Blocks logs</label>
+-                                    <orient>wxHORIZONTAL</orient>
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLogPluginInfo">
+ 												<label>Enable plugin Info logging</label>
+-                                            <checked>1</checked>
++												<checked>1</checked>
+ 											</object>
+ 											<flag>wxBOTTOM|wxLEFT|wxRIGHT</flag>
+ 											<border>5</border>
+@@ -461,8 +448,8 @@
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLogPluginDebug">
+ 												<label>Enable plugin Debug logging</label>
+-                                            <checked>0</checked>
+ 											</object>
++											<flag>wxALIGN_LEFT</flag>
+ 											<border>5</border>
+ 										</object>
+ 									</object>
+@@ -469,17 +456,12 @@
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+ 								</object>
+-                            <!-- End clangd options for Code::Blocks logging -->
+-
+-                            <!-- Begin clangd options for external client/server logging -->
+ 								<object class="sizeritem">
+ 									<object class="wxStaticBoxSizer">
+ 										<label>Clangd External client/server logging options</label>
+-                                    <orient>wxHORIZONTAL</orient>
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLogClangdClient">
+ 												<label>Enable Clangd Client logging</label>
+-                                            <checked>0</checked>
+ 											</object>
+ 											<flag>wxBOTTOM|wxLEFT|wxRIGHT</flag>
+ 											<border>5</border>
+@@ -487,8 +469,8 @@
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLogClangdServer">
+ 												<label>Enable Clangd Server logging</label>
+-                                            <checked>0</checked>
+ 											</object>
++											<flag>wxALIGN_LEFT</flag>
+ 											<border>5</border>
+ 										</object>
+ 									</object>
+@@ -495,17 +477,12 @@
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+ 								</object>
+-                            <!-- End clangd options for external client/server logging -->
+-
+-                            <!-- Begin clangd LSP messages log optons -->
+ 								<object class="sizeritem">
+ 									<object class="wxStaticBoxSizer">
+ 										<label>Clangd LSP messages tab options</label>
+-                                    <orient>wxHORIZONTAL</orient>
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLSPMsgsFocusOnSave">
+ 												<label>Focus tab when saving text</label>
+-                                            <checked>0</checked>
+ 											</object>
+ 											<flag>wxBOTTOM|wxLEFT|wxRIGHT</flag>
+ 											<border>5</border>
+@@ -513,8 +490,8 @@
+ 										<object class="sizeritem">
+ 											<object class="wxCheckBox" name="chkLSPMsgsClearOnSave">
+ 												<label>Clear old tab messages when saving text</label>
+-                                            <checked>0</checked>
+ 											</object>
++											<flag>wxALIGN_LEFT</flag>
+ 											<border>5</border>
+ 										</object>
+ 									</object>
+@@ -521,8 +498,6 @@
+ 									<flag>wxALL|wxEXPAND</flag>
+ 									<border>8</border>
+ 								</object>
+-                            <!-- End clangd LSP messages log optons -->
+-
+ 							</object>
+ 						</object>
+ 						<label>C/C++ parser (adv.)</label>
+Index: src/plugins/contrib/envvars/envvars.xrc
+===================================================================
+--- src/plugins/contrib/envvars/envvars.xrc	(revision 13490)
++++ src/plugins/contrib/envvars/envvars.xrc	(working copy)
+@@ -59,7 +59,7 @@
+ 			<object class="sizeritem">
+ 				<object class="wxStaticText" name="lblNote">
+ 					<label>NOTE: These variables are applied on startup (or manually) within the focus of Code::Blocks.</label>
+-					<fg>#800000</fg>
++					<fg>#FF8080</fg>
+ 					<style>wxALIGN_CENTRE</style>
+ 				</object>
+ 				<flag>wxTOP|wxLEFT|wxRIGHT|wxEXPAND</flag>
+Index: src/plugins/contrib/envvars/project_settings.xrc
+===================================================================
+--- src/plugins/contrib/envvars/project_settings.xrc	(revision 13490)
++++ src/plugins/contrib/envvars/project_settings.xrc	(working copy)
+@@ -21,7 +21,7 @@
+ 			<object class="sizeritem">
+ 				<object class="wxStaticText" name="ID_STATICTEXT1">
+ 					<label>NOTE: Environment variables sets can be setup (globally within C::B) under:&#x0A;Settings -&gt; Environment -&gt; Environment variables</label>
+-					<fg>#800000</fg>
++					<fg>#FF8080</fg>
+ 				</object>
+ 				<flag>wxALL|wxEXPAND</flag>
+ 				<border>8</border>
+Index: src/plugins/contrib/help_plugin/help_plugin.xrc
+===================================================================
+--- src/plugins/contrib/help_plugin/help_plugin.xrc	(revision 13490)
++++ src/plugins/contrib/help_plugin/help_plugin.xrc	(working copy)
+@@ -93,7 +93,7 @@
+ 					<object class="sizeritem">
+ 						<object class="wxStaticText" name="ID_STATICTEXT1">
+ 							<label>TIP: $(keyword) will be replaced by the word under the cursor</label>
+-							<fg>#800000</fg>
++							<fg>#FF8080</fg>
+ 						</object>
+ 						<flag>wxBOTTOM|wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 						<border>5</border>
+Index: src/plugins/debuggergdb/resources/debugger_options_dlg.xrc
+===================================================================
+--- src/plugins/debuggergdb/resources/debugger_options_dlg.xrc	(revision 13490)
++++ src/plugins/debuggergdb/resources/debugger_options_dlg.xrc	(working copy)
+@@ -75,7 +75,7 @@
+ 					<object class="sizeritem">
+ 						<object class="wxStaticText" name="ID_STATICTEXT1">
+ 							<label>These commands will be sent to the debugger on each session start</label>
+-							<fg>#800000</fg>
++							<fg>#FF8080</fg>
+ 						</object>
+ 						<flag>wxEXPAND</flag>
+ 						<border>5</border>
+Index: src/sdk/resources/auto_detect_compilers.xrc
+===================================================================
+--- src/sdk/resources/auto_detect_compilers.xrc	(revision 13490)
++++ src/sdk/resources/auto_detect_compilers.xrc	(working copy)
+@@ -48,7 +48,7 @@
+ 					<object class="sizeritem">
+ 						<object class="wxStaticText" name="lblDefCompiler">
+ 							<label>xxx</label>
+-							<fg>#800000</fg>
++							<fg>#FF8080</fg>
+ 						</object>
+ 						<flag>wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 						<border>8</border>
+Index: src/sdk/resources/findreplacedlg.xrc
+===================================================================
+--- src/sdk/resources/findreplacedlg.xrc	(revision 13490)
++++ src/sdk/resources/findreplacedlg.xrc	(working copy)
+@@ -559,7 +559,7 @@
+ 															<object class="sizeritem">
+ 																<object class="wxStaticText" name="wxID_STATIC">
+ 																	<label>Example mask: *.cpp;*.h</label>
+-																	<fg>#800000</fg>
++																	<fg>#FF8080</fg>
+ 																</object>
+ 																<flag>wxALIGN_TOP</flag>
+ 															</object>
+Index: src/sdk/resources/new_from_template.xrc
+===================================================================
+--- src/sdk/resources/new_from_template.xrc	(revision 13490)
++++ src/sdk/resources/new_from_template.xrc	(working copy)
+@@ -202,7 +202,7 @@
+ 								<object class="sizeritem">
+ 									<object class="wxStaticText" name="ID_STATICTEXT7">
+ 										<label>   Please note the dot (.) in front of &quot;codeblocks&quot;!</label>
+-										<fg>#800000</fg>
++										<fg>#FF8080</fg>
+ 									</object>
+ 									<flag>wxALIGN_LEFT</flag>
+ 								</object>
+Index: src/src/resources/app_compiler_settings.xrc
+===================================================================
+--- src/src/resources/app_compiler_settings.xrc	(revision 13490)
++++ src/src/resources/app_compiler_settings.xrc	(working copy)
+@@ -26,7 +26,7 @@
+ 									<weight>bold</weight>
+ 									<underlined>0</underlined>
+ 								</font>
+-								<style>wxALIGN_CENTRE|wxNO_BORDER|wxTRANSPARENT_WINDOW</style>
++								<style>wxALIGN_CENTRE|wxBORDER_NONE|wxTRANSPARENT_WINDOW</style>
+ 							</object>
+ 							<flag>wxALIGN_TOP</flag>
+ 						</object>
+@@ -90,7 +90,7 @@
+ 										<object class="sizeritem">
+ 											<object class="wxStaticText" name="ID_STATICTEXT3">
+ 												<label>Tip: Ensure you only load what&apos;s needed (saves start-up time).</label>
+-												<fg>#800000</fg>
++												<fg>#FF8080</fg>
+ 											</object>
+ 											<flag>wxLEFT|wxRIGHT|wxEXPAND</flag>
+ 											<border>4</border>
+Index: src/src/resources/project_options.xrc
+===================================================================
+--- src/src/resources/project_options.xrc	(revision 13490)
++++ src/src/resources/project_options.xrc	(working copy)
+@@ -96,7 +96,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT5">
+ 														<label>The file must exist, no Makefile will be auto-generated!&#x0A;If you make changes here, the special settings in the projects build&#x0A;options will only be enabled (or disabled), if the project is saved.</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxALIGN_LEFT</flag>
+ 													<border>4</border>
+@@ -114,6 +114,7 @@
+ 															<object class="wxTextCtrl" name="txtExecutionDir">
+ 																<enabled>0</enabled>
+ 															</object>
++															<flag>wxALIGN_LEFT</flag>
+ 															<border>2</border>
+ 															<option>1</option>
+ 														</object>
+@@ -163,7 +164,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT7">
+ 														<label>If you change the strategy used for PCH generation,</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxALIGN_LEFT</flag>
+ 												</object>
+@@ -170,7 +171,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT8">
+ 														<label>please delete the old PCH file (or directory) manually to avoid conflicts...</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxALIGN_LEFT</flag>
+ 												</object>
+@@ -204,7 +205,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT10">
+ 														<label>(this setting is mostly useful for large projects containing similarly named files&#x0A;differing on extension only)</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxALIGN_LEFT</flag>
+ 												</object>
+@@ -230,7 +231,7 @@
+ 												<object class="sizeritem">
+ 													<object class="wxStaticText" name="ID_STATICTEXT23">
+ 														<label>(disabling the checking for externally modified files is mostly useful for projects&#x0A;on slow network shares. Be careful, external modification might silently&#x0A;override the files, if you do not save them from inside Code::Blocks)</label>
+-														<fg>#800000</fg>
++														<fg>#FF8080</fg>
+ 													</object>
+ 													<flag>wxALIGN_LEFT</flag>
+ 												</object>
