@@ -1,9 +1,16 @@
-full.patch for \
-FortranProject.patch for \src\plugins\contrib\FortranProject\
+```
+Welcome to the Code::Block Dark Theme
+-------------------------------------
+```
+
+full.patch for `\`
+FortranProject.patch for `\src\plugins\contrib\FortranProject\`
 
 Dark pictures copy to
+```
 ..\src\resources\images\
 ..\src\resources\start_here\
+```
 
 Compile Workspace CodeBlocks_wx33_64.workspace
 
