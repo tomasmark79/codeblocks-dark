@@ -1,0 +1,14 @@
+Index: app.cpp
+===================================================================
+--- app.cpp	(revision 13490)
++++ app.cpp	(working copy)
+@@ -591,6 +591,9 @@
+ 
+ bool CodeBlocksApp::OnInit()
+ {
++#if wxCHECK_VERSION(3,3,0)
++    MSWEnableDarkMode(DarkMode_Always); // turn on dark mode if wx 3.3
++#endif
+ #ifdef __WXMSW__
+     InitCommonControls();
+ #endif
