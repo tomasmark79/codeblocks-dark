@@ -1,5 +1,5 @@
 ```
-Welcome to the Code::Block Dark Theme
+Code::Blocks Dark Theme Build
 -------------------------------------
 ```
 
