@@ -2,6 +2,7 @@
 Code::Blocks Dark Theme Build
 -------------------------------------
 ```
+![Alt text](/screenshot.png?raw=true "Code::Blocks Dark Mode")
 
 full.patch for `\`
 FortranProject.patch for `\src\plugins\contrib\FortranProject\`
