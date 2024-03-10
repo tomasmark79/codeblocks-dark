@@ -1,7 +1,5 @@
-```
-Code::Blocks Dark Theme Build
--------------------------------------
-```
+### Code::Blocks Dark UI Build
+
 ![Alt text](/screenshot.png?raw=true "Code::Blocks Dark Mode")
 
 full.patch for `\`
